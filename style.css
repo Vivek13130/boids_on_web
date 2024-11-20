@@ -1,0 +1,295 @@
+/* General Styles */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      /* border:  1px solid yellow; */
+}
+
+body {
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.6;
+}
+
+.highlight-text {
+      color: #ff6600;
+}
+
+.container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+}
+
+.hint {
+      color: #ff6600;
+      /* Highlighted orange color for hint */
+      margin-top: 15px;
+      /* Spacing above the hint */
+      font-size: 2rem;
+}
+
+/* Navbar */
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid grey;
+}
+
+.navbar .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+}
+
+.nav-links {
+      list-style-type: none;
+}
+
+.nav-links li {
+      display: inline;
+      margin-left: 20px;
+}
+
+.nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+      color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+      text-align: center;
+      padding: 5rem 2rem;
+      /* padding: 100px 20px; */
+}
+
+.hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+}
+
+.hero p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      color: #ddd;
+}
+
+.btn {
+      display: inline-block;
+      background-color: #ff6600;
+      color: #fff;
+      padding: 10px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.2rem;
+}
+
+.btn:hover {
+      letter-spacing: 1px;
+      /* font-weight: bold; */
+}
+
+/* Content Sections */
+.content-section {
+      /* text-align: center; */
+      /* padding: 60px 20px; */
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid grey;
+      margin-bottom: 3rem;
+}
+
+.content-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+}
+
+.content-section p {
+      /* padding-left: 3rem; */
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 20px;
+}
+
+.single-rule img {
+      width: 30rem;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 40px;
+}
+
+#about h2 {
+      margin-top: 40px;
+}
+
+.section-heading {
+      color: #ffffff;
+      font-size: 28px;
+      margin-bottom: 30px;
+}
+
+
+
+
+/* Applications section */
+.application {
+      margin-bottom: 20px;
+}
+
+/* Application title styles */
+.application-title {
+      color: #ff6600;
+      font-weight: bold;
+      font-size: 20px;
+}
+
+/* Application description styles */
+.application-description {
+      margin-top: 5px;
+      font-size: 16px;
+}
+
+#future {
+      /* margin: 20px;
+      padding: 20px; */
+      background-color: rgba(0, 0, 0, 0.7);
+      /* Slightly transparent black background */
+      border-radius: 8px;
+}
+
+
+#future p {
+      /* White text color */
+      margin-bottom: 10px;
+      /* Spacing between paragraphs */
+}
+
+
+#simulation {
+      background-color: rgba(0, 0, 0, 0.8);
+      /* Darker background for emphasis */
+      border-radius: 8px;
+      text-align: center;
+      /* Center align text */
+}
+
+#simulation h2 {
+      color: #ff6600;
+      /* Highlighted orange color for the heading */
+}
+
+#simulation p {
+      color: white;
+      /* White text color */
+      margin-bottom: 10px;
+      /* Spacing between paragraphs */
+}
+
+.btn {
+      display: inline-block;
+      /* Make the link behave like a button */
+      padding: 10px 20px;
+      /* Padding for the button */
+      background-color: #ff6600;
+      /* Button background color */
+      color: white;
+      /* Button text color */
+      text-decoration: none;
+      /* Remove underline */
+      border-radius: 5px;
+      /* Rounded corners */
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      /* Animation effects */
+      font-weight: bold;
+      /* Bold text */
+      margin: 1rem;
+}
+
+.btn:hover {
+      background-color: #e55b00;
+      /* Darker orange on hover */
+      transform: scale(1.05);
+      /* Slightly enlarge button on hover */
+}
+
+
+
+
+
+
+
+/* Setting container */
+.setting {
+      margin-bottom: 15px;
+}
+
+/* Title styles */
+.setting-title {
+      color: #ff6600;
+      font-weight: bold;
+}
+
+/* Description styles */
+.setting-description {
+      margin-top: 5px;
+}
+
+/* Challenges Section Styles */
+#challenges {
+      /* margin: 20px; */
+      color: white;
+}
+
+/* Section heading styles */
+.section-heading {
+      font-size: 28px;
+      margin-bottom: 15px;
+}
+
+/* Challenge block styles */
+.challenge {
+      margin-bottom: 2rem;
+      /* padding-left: 20px; */
+      /* border-left: 4px solid #ff6600; */
+      /* Highlighting each challenge */
+}
+
+/* Challenge title styles */
+.challenge-title {
+      font-size: 22px;
+      color: #ff6600;
+      margin-bottom: 5px;
+}
+
+/* Challenge description styles */
+.challenge-description {
+      font-size: 16px;
+}
+
+
+/* Footer */
+footer {
+      text-align: center;
+      padding: 40px;
+      background-color: #111;
+      margin-top: 60px;
+}
+
+footer a {
+      color: #ff6600;
+      text-decoration: none;
+      font-size: 1.1rem;
+}

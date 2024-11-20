@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Boids Flocking Simulation</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <div class="container">
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                  <div class="logo">Boids</div>
+                  <ul class="nav-links">
+                        <li><a href="#about">What Are Boids?</a></li>
+                        <li><a href="#simulation">Try Simulation</a></li>
+                        <li><a href="#learn-more">Learn More</a></li>
+                  </ul>
+            </nav>
+
+            <!-- Hero Section -->
+            <section class="hero">
+                  <h1>Explore Boids Flocking Simulation</h1>
+                  <p>Witness the mesmerizing patterns of flocking birds and fish, brought to life with simple rules.</p>
+                  <a href="#simulation" class="btn">Launch Simulation</a>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                  <h2>What Are Boids?</h2>
+                  <p>"Boids" stands for bird-oid objects and was created by computer scientist <span
+                              class="highlight-text">Craig Reynolds in 1986</span>.
+                        It’s a simple yet powerful algorithm that simulates the collective movement of a group. Each
+                        boid (a bird-like agent) follows <span class="highlight-text">three simple rules</span> to
+                        create the complex, natural-looking behavior of a flock.</p>
+            </section>
+
+
+
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                  <h2>Rules, What Rules ?</h2>
+                  <p>Boids simulate the movement of flocks, schools, and crowds using just three simple rules:
+                        Separation, Alignment, and Cohesion.
+                  </p>
+
+                  <div class="rules">
+
+                        <div class="single-rule">
+                              <h3><span class="highlight-text">Separation</span></h3>
+                              <p>Each boid attempts to avoid running into other boids. If two or more boids get too
+                                    close to one another (i.e. within one another's protected range), they will steer
+                                    away from one another.</p>
+                              <img src="separation.png" alt="Image Corrupted">
+                        </div>
+
+                        <div class="single-rule">
+                              <h3><span class="highlight-text">Alignment</span></h3>
+                              <p>Each boid attempts to match the velocity of other boids inside its visible range.</p>
+                              <img src="alignment.png" alt="Image Corrupted">
+                        </div>
+
+                        <div class="single-rule">
+                              <h3><span class="highlight-text">Cohesion</span></h3>
+                              <p>Each boid steers gently toward the center of mass of other boids within its visible
+                                    range. </p>
+                              <img src="cohesion.png" alt="Image Corrupted">
+                        </div>
+
+                  </div>
+
+            </section>
+
+            <!-- Learn More Section -->
+            <section id="learn-more" class="content-section">
+                  <h2 class="section-heading">Applications of Boids</h2>
+
+                  <div class="application">
+                        <strong class="application-title">1. Animation & Visual Effects</strong>
+                        <p class="application-description">Boids are used in movies and games to simulate large crowds,
+                              swarms, or herds, making animations appear more natural and organic.</p>
+                  </div>
+
+                  <div class="application">
+                        <strong class="application-title">2. Robotics</strong>
+                        <p class="application-description">Swarm robotics uses boid-inspired algorithms for coordinated
+                              multi-robot systems, improving efficiency in exploration and task execution.</p>
+                  </div>
+
+                  <div class="application">
+                        <strong class="application-title">3. Traffic Flow Simulation</strong>
+                        <p class="application-description">Boid models help simulate and optimize vehicle movements in
+                              traffic systems, reducing congestion and improving flow dynamics.</p>
+                  </div>
+
+                  <div class="application">
+                        <strong class="application-title">4. Virtual Reality</strong>
+                        <p class="application-description">Boids are used in VR environments to create lifelike
+                              simulations of flocking behaviors, enhancing immersion in natural settings.</p>
+                  </div>
+
+                  <div class="application">
+                        <strong class="application-title">5. Biology Research</strong>
+                        <p class="application-description">Scientists use boid algorithms to model and study the
+                              collective behavior of animals, such as birds, fish, and insects in nature.</p>
+                  </div>
+            </section>
+
+
+            <section id="about" class="content-section">
+                  <h2 class="section-heading">Tweak the Flock (UI elements)</h2>
+
+                  <div class="setting">
+                        <strong class="setting-title">Alignment</strong>
+                        <p class="setting-description">Controls how strongly each boid adjusts its direction to match
+                              the average heading of nearby boids. A higher value leads to more synchronized movement
+                              across the flock.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Cohesion</strong>
+                        <p class="setting-description">Determines how much a boid is drawn toward the center of nearby
+                              boids. Increasing this value makes the boids cluster more tightly together.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Separation</strong>
+                        <p class="setting-description">Ensures that each boid keeps a comfortable distance from its
+                              neighbors to avoid crowding or collisions. Larger values cause boids to spread out more.
+                        </p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Separation Sensitivity</strong>
+                        <p class="setting-description">Tunes the separation behavior by making boids more or less
+                              sensitive to nearby boids. Adjusting this changes how quickly they steer away when
+                              neighbors are close.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Noise</strong>
+                        <p class="setting-description">Introduces a random element into boid movement. This simulates
+                              the unpredictable nature of animals and prevents overly mechanical behavior.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Minimum Speed</strong>
+                        <p class="setting-description">Sets the lowest speed at which a boid can travel. This ensures
+                              boids keep moving and don’t slow down too much.
+                        </p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Maximum Speed</strong>
+                        <p class="setting-description">Limits the fastest speed a boid can reach. Tuning this helps
+                              control how quickly the flock moves and reacts to changes in direction.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Maximum Acceleration</strong>
+                        <p class="setting-description">Defines how quickly a boid can change its velocity. A lower
+                              acceleration makes boids move more smoothly, while a higher value results in sharper,
+                              quicker turns.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Field of View (FOV)</strong>
+                        <p class="setting-description">Determines how much of its surroundings a boid can “see.” A
+                              larger FOV allows boids to detect others at wider angles, affecting their awareness of the
+                              flock.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Update Latency</strong>
+                        <span style="font-style: italic;">(CURRENTLY DISABLED)</span>
+                        <p class="setting-description">Controls the time delay between updates in the boid’s position
+                              and behavior. Higher values simulate slower reaction times, making boids less responsive
+                              to changes around them.
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Detection Radius</strong>
+                        <p class="setting-description">Defines how far away a boid can sense other boids. This radius
+                              controls the range at which the boid's rules (separation, alignment, cohesion) apply to
+                              its neighbors.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Trail Length</strong>
+                        <p class="setting-description">Adjusts how long the visual trail behind each boid appears,
+                              allowing you to track their movement paths. Increasing this makes the trails longer,
+                              showing more of the flock's flow.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Trails</strong>
+                        <p class="setting-description">Toggle to display or hide the movement trails of boids. When
+                              enabled, you can see the path each boid takes.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Colors</strong>
+                        <p class="setting-description">Switch to randomize the colors of boids based on their group
+                              density. This makes it easier to
+                              visually differentiate them in the simulation.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Show Clusters</strong>
+                        <p class="setting-description">Highlights groups of boids by drawing circles around them, making
+                              it easier to see how they form and interact. Toggle this to better visualize flocking
+                              behavior in real-time.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Randomize</strong>
+                        <p class="setting-description">A button to generate new random parameters for the boids, letting
+                              you explore different behaviors.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Reset</strong>
+                        <p class="setting-description">This button restores all settings to their default values, making
+                              it easy to start over and try new adjustments.</p>
+                  </div>
+
+            </section>
+
+
+            <section id="challenges" class="content-section">
+                  <h2 class="section-heading">Making Boids Work: Not As Easy As It Seems</h2>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">1. Optimization of Boid Behavior</h3>
+                        <p class="challenge-description">Even though the basic rules for boid behavior are easy to
+                              understand, getting them to work smoothly with bigger flocks was tough. Each boid has to
+                              interact with its neighbors, which takes a lot of computing power. To keep everything
+                              running smoothly in real-time, I needed to use something like Quad Trees or Spatial
+                              Partitioning. While Quad Trees are complicated to code, I decided to go with Spatial
+                              Hashing, and it worked great!</p>
+                  </div>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">2. Color Density Visualization</h3>
+                        <p class="challenge-description">Creating a color density view meant I had to change the colors
+                              of the boids based on their neighbors and how tightly they were packed together. Finding
+                              the right balance between looking good and keeping things running smoothly was tricky.
+                              Frequent updates could slow things down, especially when there were a lot of boids.</p>
+                  </div>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">3. Calibration of Rule Weights</h3>
+                        <p class="challenge-description">Tuning the balance and limits of the constraints turned out to
+                              be more time consuming than I thought. Even small changes to these settings led to big
+                              differences in how the boids behaved. This meant I had to carefully adjust and test things
+                              over and over to get it just right.</p>
+                  </div>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">4. Smooth Visual Trails</h3>
+                        <p class="challenge-description">I really struggled with this for a day or two. Adding visual
+                              trails for each boid made the simulation look nicer, but it was tough to get the rendering
+                              to work smoothly. The trails had to be long enough to show movement without cluttering the
+                              display, which meant I had to optimize things carefully to keep performance from dropping.
+                        </p>
+                  </div>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">5. Visualizing Clusters</h3>
+                        <p class="challenge-description">I struggled to figure out how to even decide if a cluster was
+                              forming, or how big the cluster should be. Detecting and visualizing clusters of boids in
+                              real-time required algorithms that could quickly identify groups. It was really
+                              unintuitive to determine what counted as a cluster and how to handle the size of those
+                              clusters without hurting performance.
+
+                        </p>
+                  </div>
+
+                  <div class="challenge">
+                        <h3 class="challenge-title">6. Incorporating User Controls and Tweaks</h3>
+                        <p class="challenge-description">The system needed to manage various inputs without causing the
+                              simulation to crash. This meant I had to create a strong design that could handle changes
+                              smoothly and efficiently.</p>
+                  </div>
+            </section>
+
+
+
+            <!-- Simulation Section -->
+            <section id="simulation" class="content-section">
+                  <h2>See Boids In Action</h2>
+                  <!-- <p>Click below to experience the boids simulation in real-time.</p> -->
+                  <a href="https://animated-lollipop-1999a5.netlify.app/" target="_blank" class="btn">Launch Simulation</a>
+                  <p class="hint" >Use <span style="color: yellow; font-size: 1.5rem;">'S'</span> key to spawn more boids.</p>
+            </section>
+
+
+            <section id="future" class="content-section">
+                  <h2>What’s Next?</h2>
+                  <p><strong><span class="highlight-text">Predators:</span></strong> I plan to introduce predators into
+                        the simulation to create a more dynamic environment where boids must evade threats.</p>
+                  <p><strong><span class="highlight-text">Obstacle Detection and Avoidance:</span></strong> An obstacle
+                        detection and avoidance system will be added to enhance the realism of the simulation, allowing
+                        boids to navigate around barriers.</p>
+                  <p><strong><span class="highlight-text">Share Your Ideas:</span></strong> If you have any suggestions
+                        or ideas about what I can add to this project, I’d love to hear them!</p>
+            </section>
+
+
+
+
+            <!-- Footer -->
+            <footer>
+                  <p>Created by [Your Name]</p>
+                  <a href="mailto:your-email@example.com">Contact Me</a>
+            </footer>
+      </div>
+</body>
+
+</html>
