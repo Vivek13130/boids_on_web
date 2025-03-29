@@ -198,6 +198,77 @@ body {
       /* Spacing between paragraphs */
 }
 
+.simulation-container {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+}
+
+.simulation-card {
+      background: #222;
+      color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(255, 170, 0, 0.3);
+      text-align: center;
+      width: 400px;
+      transition: transform 0.2s ease-in-out;
+}
+
+.simulation-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px #ff6600;
+}
+
+.simulation-card h3 {
+      color: #ff6600;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+}
+
+.simulation-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 15px;
+      text-align: left;
+}
+
+.simulation-card li {
+      font-size: 1rem;
+      padding: 5px 0;
+}
+
+.simulation-card .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #ff6600;
+      color: #000;
+      padding: 12px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+}
+
+.simulation-card .btn:hover {
+      background: #ffffff;
+      transition: all 0.2s;
+}
+
+.simulation-card .hint {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+}
+
+.key {
+      color: #ff6600;
+      font-size: 1.3rem;
+      font-weight: bold;
+}
+
+
 .btn {
       display: inline-block;
       /* Make the link behave like a button */
@@ -227,6 +298,99 @@ body {
 
 
 
+.future-container {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+}
+
+.future-card {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(255, 81, 0, 0.3);
+      text-align: center;
+      width: 280px;
+      transition: transform 0.2s ease-in-out;
+}
+
+.future-card-info {
+      text-align: justify;
+}
+
+.future-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(255, 81, 0, 0.5);
+}
+
+.future-card h3 {
+      color: #ffaa00;
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+}
+
+.future-card p {
+      font-size: 1rem;
+      opacity: 0.9;
+}
+
+.future-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+}
+
+.future-list li {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border-left: 5px solid #ffaa00;
+      font-size: 1.1rem;
+      border-radius: 5px;
+}
+
+.highlighted-update {
+      background: rgb(105, 0, 0);
+      color: #ffc400 !important;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      border-radius: 5px;
+}
+
+
+.current-project {
+      text-align: center;
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #333;
+      border: 2px solid #ffaa00;
+      border-radius: 5px;
+}
+
+
+.current-project {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      border: 2px solid #ff5100;
+      border-radius: 10px;
+      background: rgba(255, 81, 0, 0.1);
+}
+
+.current-project strong {
+      font-size: 1.2rem;
+      color: #ffaa00;
+}
+
+.current-project p {
+      margin: 5px 0;
+      font-size: 1rem;
+}
 
 
 
@@ -281,15 +445,33 @@ body {
 
 
 /* Footer */
-footer {
+.footer {
       text-align: center;
-      padding: 40px;
-      background-color: #111;
-      margin-top: 60px;
+      padding: 1.5rem;
+      background: #111;
+      color: white;
+      font-size: 1rem;
 }
 
-footer a {
+.footer .highlight {
       color: #ff6600;
+      font-weight: bold;
+}
+
+.footer-links {
+      margin-top: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+}
+
+.footer-links a {
       text-decoration: none;
-      font-size: 1.1rem;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+      color: #ff6600;
 }

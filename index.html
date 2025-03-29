@@ -140,11 +140,11 @@
                               neighbors are close.</p>
                   </div>
 
-                  <div class="setting">
+                  <!-- <div class="setting">
                         <strong class="setting-title">Noise</strong>
                         <p class="setting-description">Introduces a random element into boid movement. This simulates
                               the unpredictable nature of animals and prevents overly mechanical behavior.</p>
-                  </div>
+                  </div> -->
 
                   <div class="setting">
                         <strong class="setting-title">Minimum Speed</strong>
@@ -173,13 +173,13 @@
                               flock.</p>
                   </div>
 
-                  <div class="setting">
+                  <!-- <div class="setting">
                         <strong class="setting-title">Update Latency</strong>
                         <span style="font-style: italic;">(CURRENTLY DISABLED)</span>
                         <p class="setting-description">Controls the time delay between updates in the boid’s position
                               and behavior. Higher values simulate slower reaction times, making boids less responsive
                               to changes around them.
-                  </div>
+                  </div> -->
 
                   <div class="setting">
                         <strong class="setting-title">Detection Radius</strong>
@@ -189,36 +189,38 @@
                   </div>
 
                   <div class="setting">
-                        <strong class="setting-title">Trail Length</strong>
-                        <p class="setting-description">Adjusts how long the visual trail behind each boid appears,
-                              allowing you to track their movement paths. Increasing this makes the trails longer,
-                              showing more of the flock's flow.</p>
-                  </div>
-
-                  <div class="setting">
                         <strong class="setting-title">Trails</strong>
                         <p class="setting-description">Toggle to display or hide the movement trails of boids. When
                               enabled, you can see the path each boid takes.</p>
                   </div>
 
                   <div class="setting">
+                        <strong class="setting-title">Trail Length</strong>
+                        <p class="setting-description">Adjusts how long the visual trail behind each boid appears,
+                              allowing you to track their movement paths. Increasing this makes the trails longer,
+                              showing more of the flock's flow.</p>
+                  </div>
+
+
+                  <!-- <div class="setting">
                         <strong class="setting-title">Colors</strong>
                         <p class="setting-description">Switch to randomize the colors of boids based on their group
                               density. This makes it easier to
                               visually differentiate them in the simulation.</p>
-                  </div>
+                  </div> -->
 
                   <div class="setting">
                         <strong class="setting-title">Show Clusters</strong>
-                        <p class="setting-description">Highlights groups of boids by drawing circles around them, making
+                        <p class="setting-description">Highlights groups of boids by assigning them a unique color,
+                              making
                               it easier to see how they form and interact. Toggle this to better visualize flocking
-                              behavior in real-time.</p>
+                              behavior in real-time. ( Updated once every 60 frames ) </p>
                   </div>
 
                   <div class="setting">
                         <strong class="setting-title">Randomize</strong>
                         <p class="setting-description">A button to generate new random parameters for the boids, letting
-                              you explore different behaviors.</p>
+                              you explore and enjoy different behaviors.</p>
                   </div>
 
                   <div class="setting">
@@ -226,6 +228,27 @@
                         <p class="setting-description">This button restores all settings to their default values, making
                               it easy to start over and try new adjustments.</p>
                   </div>
+
+                  <p class="highlighted-update">✨ Newly Added !</p>
+
+                  <div class="setting">
+                        <strong class="setting-title">Explosive Clicks</strong>
+                        <p class="setting-description">Click to create a shockwave that pushes nearby boids away. Useful
+                              for breaking up dense clusters.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title">Interactive Obstacles</strong>
+                        <p class="setting-description">Click to pick an obstacle, re-click to place it anywhere, or
+                              re-click on the obstacle itself to drop it back.</p>
+                  </div>
+
+                  <div class="setting">
+                        <strong class="setting-title"> Performance Stats</strong>
+                        <p class="setting-description">Detailed real-time performance metrics to monitor FPS, boid
+                              count, and processing efficiency.</p>
+                  </div>
+
 
             </section>
 
@@ -240,19 +263,20 @@
                               interact with its neighbors, which takes a lot of computing power. To keep everything
                               running smoothly in real-time, I needed to use something like Quad Trees or Spatial
                               Partitioning. While Quad Trees are complicated to code, I decided to go with Spatial
-                              Hashing, and it worked great!</p>
+                              Hashing, and it worked great!
+                        </p>
                   </div>
 
-                  <div class="challenge">
-                        <h3 class="challenge-title">2. Color Density Visualization</h3>
+                  <!-- <div class="challenge">
+                        <h3 class="challenge-title">2. Cluster Visualization</h3>
                         <p class="challenge-description">Creating a color density view meant I had to change the colors
                               of the boids based on their neighbors and how tightly they were packed together. Finding
                               the right balance between looking good and keeping things running smoothly was tricky.
                               Frequent updates could slow things down, especially when there were a lot of boids.</p>
-                  </div>
+                  </div> -->
 
                   <div class="challenge">
-                        <h3 class="challenge-title">3. Calibration of Rule Weights</h3>
+                        <h3 class="challenge-title">2. Calibration of Rule Weights</h3>
                         <p class="challenge-description">Tuning the balance and limits of the constraints turned out to
                               be more time consuming than I thought. Even small changes to these settings led to big
                               differences in how the boids behaved. This meant I had to carefully adjust and test things
@@ -260,7 +284,7 @@
                   </div>
 
                   <div class="challenge">
-                        <h3 class="challenge-title">4. Smooth Visual Trails</h3>
+                        <h3 class="challenge-title">3. Smooth Visual Trails</h3>
                         <p class="challenge-description">I really struggled with this for a day or two. Adding visual
                               trails for each boid made the simulation look nicer, but it was tough to get the rendering
                               to work smoothly. The trails had to be long enough to show movement without cluttering the
@@ -269,7 +293,7 @@
                   </div>
 
                   <div class="challenge">
-                        <h3 class="challenge-title">5. Visualizing Clusters</h3>
+                        <h3 class="challenge-title">4. Visualizing Clusters</h3>
                         <p class="challenge-description">I struggled to figure out how to even decide if a cluster was
                               forming, or how big the cluster should be. Detecting and visualizing clusters of boids in
                               real-time required algorithms that could quickly identify groups. It was really
@@ -280,7 +304,7 @@
                   </div>
 
                   <div class="challenge">
-                        <h3 class="challenge-title">6. Incorporating User Controls and Tweaks</h3>
+                        <h3 class="challenge-title">5. Incorporating User Controls and Tweaks</h3>
                         <p class="challenge-description">The system needed to manage various inputs without causing the
                               simulation to crash. This meant I had to create a strong design that could handle changes
                               smoothly and efficiently.</p>
@@ -290,21 +314,60 @@
 
 
             <!-- Simulation Section -->
-            <section id="simulation" class="content-section">
+            <!-- <section id="simulation" class="content-section">
                   <h2>See Boids In Action</h2>
-                  <!-- <p>Click below to experience the boids simulation in real-time.</p> -->
                   <a href="https://animated-lollipop-1999a5.netlify.app/" target="_blank" class="btn">Launch
                         Simulation</a>
                   <p class="hint">Use <span style="color: yellow; font-size: 1.5rem;">'S'</span> key to spawn more
                         boids.</p>
+            </section> -->
+            <!-- Simulation Section -->
+            <!-- Simulation Section -->
+            <section id="simulation" class="content-section">
+                  <h2>See Boids In Action</h2>
+                  <p class="hint">Press <span class="key">S</span> to spawn boids.</p>
+                  <p class="hint"><span class="key">*</span> indicates performance intensive tasks.</p>
+                  <br>
+                  <div class="simulation-container">
+                        <!-- Version 1 Card -->
+                        <div class="simulation-card">
+                              <h3>Version 1</h3>
+                              <ul>
+                                    <li>✅ Basic flocking behavior</li>
+                                    <li>✅ Alignment, Cohesion, Separation</li>
+                                    <li>✅ Spatial Hashing + Reduced computations</li>
+                                    <li>✅ 10+ Tweakable Behaviour Parameters</li>
+                              </ul>
+                              <a href="https://boids-version-1.netlify.app/" target="_blank" class="btn">Launch
+                                    Version 1</a>
+                        </div>
+
+                        <!-- Version 2 Card -->
+                        <div class="simulation-card">
+                              <h3>Version 2</h3>
+                              <ul>
+                                    <li>✅ Improved UI + Dynamic Background</li>
+                                    <li>✅ Optimized Hashing and Cluster Detection</li>
+                                    <li>✅ Noise addons on trails </li>
+                                    <li>✅ Supports upto 500 boids at 30fps</li>
+                                    <li>✅ Obstacle Detection and Avoidance</li>
+                                    <li>✅ Explosive clicks to break down large clusters</li>
+                                    <li>✅ Advanced real time performance stats</li>
+                              </ul>
+                              <a href="https://boids-version-2.netlify.app/" target="_blank" class="btn">Launch
+                                    Version 2</a>
+                        </div>
+                  </div>
             </section>
 
 
-            <section id="future" class="content-section">
+
+
+            <!-- <section id="future" class="content-section">
                   <h2>What’s Next?</h2>
                   <p><strong><span class="highlight-text">Predators:</span></strong> I plan to introduce predators into
                         the simulation to create a more dynamic environment where boids must evade threats.</p>
-                  <p><strong><span class="highlight-text">Obstacle Detection and Avoidance:</span></strong> An obstacle
+                  <p><strong><span class="highlight-text">Centralized Behavior Monitoring and Updates</span></strong> An obstacle
                         detection and avoidance system will be added to enhance the realism of the simulation, allowing
                         boids to navigate around barriers.</p>
                   <p><strong><span class="highlight-text">Share Your Ideas:</span></strong> If you have any suggestions
@@ -313,15 +376,82 @@
                   <p style="text-align: center; border : 2px solid #ff5100 ; padding : 1rem"><strong>Currently working
                               on<span class="highlight-text"> HABIT TRACKER ! </span> using React. Open to
                               collaborations.</strong></p>
+            </section> -->
+
+
+            <!-- <section id="future" class="content-section">
+                  <h2>What’s Next?</h2>
+
+                  <div class="future-container">
+                        <div class="future-card">
+                              <h3>Predators</h3>
+                              <p class="future-card-info">Adding predators to the simulation will make it more dynamic,
+                                    forcing boids to evade
+                                    threats.</p>
+                        </div>
+
+                        <div class="future-card">
+                              <h3>Centralized Behavior Monitoring and Updates</h3>
+                              <p class="future-card-info">Currently, each boid has its own behavior, memory state, and
+                                    process functions. However, with a large number of boids, this creates a performance
+                                    bottleneck. Implementing a single, centralized process function will be more
+                                    efficient, reducing overhead and significantly boosting performance.</p>
+                        </div>
+
+
+                        <div class="future-card">
+                              <h3>💡 Share Your Ideas!</h3>
+                              <p class="future-card-info">Have suggestions for new features? I’d love to hear them!</p>
+                        </div>
+                  </div>
+
+                  <div class="current-project">
+                        <p><strong> Currently working on <span class="highlight-text">Screaming Insects</span> & <span
+                                          class="highlight-text">Super Ball </span>! </strong></p>
+                        <p>Open to collaborations! Let’s build something cool together. 😎</p>
+                  </div>
+            </section> -->
+
+            <section id="future" class="content-section">
+                  <h2>What’s Next?</h2>
+
+                  <ul class="future-list">
+                        <li>
+                              <strong>Predators:</strong> Introducing predators will create a more dynamic
+                              environment where boids must evade threats.
+                        </li>
+                        <li>
+                              <strong>Centralized Behavior Monitoring:</strong> Replacing individual boid processes
+                              with a centralized system to improve performance and efficiency.
+                        </li>
+                        <li>
+                              <strong>Multi-threading:</strong> Distributing performance-heavy tasks across multiple
+                              threads to significantly improve efficiency and speed.
+                        </li>
+                        <li>
+                              <strong>Share Your Ideas:</strong> Have suggestions for new features? I’d love to hear
+                              them!
+                        </li>
+                  </ul>
+
+                  <div class="current-project">
+                        <p><strong>Currently working on <span class="highlight-text">Screaming Insects</span> & <span
+                                          class="highlight-text">Super Ball</span> !</strong></p>
+                        <p>Open to collaborations! Let’s build something cool together. </p>
+                  </div>
             </section>
 
 
-
-
             <!-- Footer -->
-            <footer>
-                  <p>Created by Vivek</p>
-                  <a href="mailto:vivekzoyakadian@gmail.com">Contact Me</a>
+            <footer class="footer">
+                  <p>Created by <span class="highlight">Vivek</span></p>
+                  <div class="footer-links">
+                        <a href="https://leetcode.com/u/vivek_13130/" target="_blank">LeetCode</a>
+                        <a href="https://www.codechef.com/users/vivek_13130" target="_blank">CodeChef</a>
+                        <a href="https://www.linkedin.com/in/vivek-kadian-60a801274/" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/Vivek13130" target="_blank">Github</a>
+                        <a href="mailto:vivekzoyakadian@gmail.com">Email</a>
+                  </div>
             </footer>
       </div>
 
